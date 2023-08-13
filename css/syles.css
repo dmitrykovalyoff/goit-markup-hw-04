@@ -139,6 +139,7 @@ ul {
 .header-menu-link:focus {
   color: var(--ocean);
   text-decoration-line: underline;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-header-section {
@@ -160,16 +161,31 @@ ul {
 .header-menu-adress:hover,
 .header-menu-adress:focus {
   color: var(--ocean);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*--------------section-1/hero--------------*/
 
 .hero {
-  padding: 188px 0;
+  max-width: 1440px;
+  width: 1440px;
   background-color: var(--navyblue);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/hero-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 188px 0;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .hero-logo {
+  background-image: url(//images/hero-bg.jpg);
   color: var(--white);
   text-align: center;
   font-size: 56px;
@@ -214,6 +230,19 @@ ul {
 }
 .skills-item {
 }
+
+.skills-container-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  width: 100%;
+  background-color: var(--cloud);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 24px 100px;
+}
+
 .skills-subtitle {
   color: var(--navyblue);
   font-size: 20px;
@@ -303,6 +332,49 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+}
+
+/*------section-5-customers---------*/
+
+.customers {
+  padding: 120px 0px;
+}
+
+.customers-title {
+  color: var(--navyblue);
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.customers-item {
+  width: calc((100% - 120px) / 6);
+}
+
+.customers-item-conteiner {
+  width: 100%;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid var(--light_slate);
+}
+.customes-link {
+  fill: var(--light_slate);
+}
+.customes-link:hover .customer-icon,
+.customes-link:focus .customer-icon {
+  fill: var(--ocean);
+  border: 1px solid var(--ocean);
 }
 
 /*--------------footer--------------*/
@@ -398,8 +470,7 @@ ul {
 
 .servicies-item-link {
 }
-.link {
-}
+
 .servicies-title {
   color: var(--navyblue);
   font-size: 20px;
