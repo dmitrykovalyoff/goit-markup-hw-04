@@ -207,7 +207,7 @@ ul {
 }
 
 .hero-logo {
-  background-image: url(//images/hero-bg.jpg);
+  background-image: url(../images/hero-bg.jpg);
   color: var(--white);
   text-align: center;
   font-size: 56px;
